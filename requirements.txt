@@ -1,2 +1,2 @@
-tensorflow==2.13.0
-tensorflow_macos==2.9.2
+h5py==3.9.0
+opt-einsum==3.3.0
