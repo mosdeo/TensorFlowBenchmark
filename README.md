@@ -2,11 +2,14 @@
 
 ## Docker_arm64v8
 - for Apple Silicon M1/M2/...
-- 目前似乎無法使用 GPU
+- 沒有寫 docker-compose.yml，因為找不到使用 metal GPU 的參數
+- 目前似乎無法透過 docker 使用 metal GPU
+- 只能不用 docker 直接執行 python3 verify.py 來測試
 
 ## Docker_amd64
 - for Intel CPU with CUDA GPU
-- docker run --gpus all -i verify
+- 可用 docker run --gpus all -i verify
+- 或者 docker-compose up -d
 
 ## 參考數據
 
