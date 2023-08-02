@@ -1,4 +1,4 @@
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 import tensorflow_datasets as tfds
 import datetime
 

@@ -1,0 +1,9 @@
+
+# docker run --gpus all -i verify
+version: '3.8'
+services:
+  verify:
+    image: verify
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all

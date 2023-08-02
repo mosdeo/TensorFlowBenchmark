@@ -1,0 +1,17 @@
+FROM tensorflow/tensorflow:latest-gpu
+
+# 將 cifar-100-python.tar.gz 文件複製到容器中
+WORKDIR /app
+COPY cifar-100-python.tar.gz /app/cifar-100-python.tar.gz
+
+# 修改 cifar100.py 文件中的 origin 變數
+RUN sed -i "s|https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz|file:///app/cifar-100-python.tar.gz|g" /usr/local/lib/python3.8/dist-packages/keras/src/datasets/cifar100.py
+
+# 複製 verify.py 文件到容器中
+COPY verify.py /app/verify.py
+
+# 執行 tensorflow gpu 測試
+RUN python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])));print(tf.__version__)"
+
+# 執行 verify.py 腳本
+CMD ["python", "/app/verify.py"]
