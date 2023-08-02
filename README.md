@@ -10,7 +10,7 @@
 
 ## 參考數據
 
-- MacBook Air M2 8CPU/10GPU 24/2T : 8.25s/epoch (GPU)
+- MacBook Air M2 8CPU/10GPU 24/2T : 80.4s/epoch (GPU)
 ```
 Epoch 1/5
 782/782 [==============================] - 82s 100ms/step - loss: 4.5111 - accuracy: 0.0912
@@ -24,7 +24,7 @@ Epoch 5/5
 782/782 [==============================] - 83s 106ms/step - loss: 3.2929 - accuracy: 0.2468
 ```
 
-- NVIDIA GA100 [A100 PCIe 40GB]x2 :  3s/epoch (Only 1GPU, usage=33%)
+- NVIDIA GA100 [A100 PCIe 40GB]x2 :  47.6s/epoch (Only 1GPU, usage=33%)
 ```
 782/782 [==============================] - 73s 60ms/step - loss: 4.5955 - accuracy: 0.0829
 Epoch 2/5
