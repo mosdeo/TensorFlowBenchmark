@@ -1,5 +1,5 @@
 
-# docker run --gpus all -i verify
+# docker run --rm --gpus all -i verify
 version: '3.8'
 services:
   verify:

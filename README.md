@@ -8,8 +8,8 @@
 
 ## Docker_amd64
 - for Intel CPU with CUDA GPU
-- 可用 docker run --gpus all -i verify
-- 或者 docker-compose up -d
+- 可用 docker run --rm --gpus all -i verify
+- 或者 ```docker-compose up -d``` 啟動、```docker-compose down``` 停止
 
 ## 參考數據
 
